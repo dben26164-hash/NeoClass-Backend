@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoClass Curriculum Import</title>
+  <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>NeoClass Curriculum Import</h1>
+    <section class="card">
+      <form id="upload-form">
+        <label for="document">Sélectionnez un fichier (.docx, .pdf, .txt)</label>
+        <input type="file" id="document" name="document" accept=".docx,.pdf,.txt" required />
+        <button type="submit">Importer</button>
+      </form>
+    </section>
+
+    <section class="card" id="status-card" hidden>
+      <h2>État de l'import</h2>
+      <div id="status-message">En attente...</div>
+      <progress id="status-progress" value="0" max="100"></progress>
+      <div id="logs"></div>
+    </section>
+  </main>
+  <script src="/upload.js"></script>
+</body>
+</html>
